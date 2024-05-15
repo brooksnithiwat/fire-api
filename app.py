@@ -2,6 +2,7 @@ from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage
+from urllib.parse import quote as url_quote  # แทนที่การนำเข้า url_quote จาก werkzeug
 
 app = Flask(__name__)
 
